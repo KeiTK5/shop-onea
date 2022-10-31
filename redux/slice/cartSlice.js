@@ -11,6 +11,15 @@ export const fetchCart = createAsyncThunk("cart/fetchCart", async () => {
   }
 });
 
+export const updateCart = async (id, object) => {
+  try {
+    const response = await api.patchCart(id, object);
+    return response;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 const initialState = {
   response: [],
   loading: "idle",
@@ -20,15 +29,15 @@ export const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
-    getDataSuccess: (state, action) => {
-      state.response = action.payload;
-    },
-    getDataPending: (state) => {
-      console.log("pending");
-    },
-    getDataErr: (state) => {
-      console.log("err");
-    },
+    // getDataSuccess: (state, action) => {
+    //   state.response = action.payload;
+    // },
+    // getDataPending: (state) => {
+    //   console.log("pending");
+    // },
+    // getDataErr: (state) => {
+    //   console.log("err");
+    // },
   },
   extraReducers: (builder) => {
     // Add reducers for additional action types here, and handle loading state as needed

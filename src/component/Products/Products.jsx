@@ -25,7 +25,6 @@ function Products(props) {
     }, [dispatch])
 
 
-
     return (
         <Row className={style.row} gutter={[16]}>
             {

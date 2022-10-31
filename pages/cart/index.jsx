@@ -5,7 +5,7 @@ import BuyBox from '../../src/component/BuyBox/buyBox';
 
 import style from './style/style.module.scss'
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchCart } from '../../redux/slice/cartSlice';
+import { fetchCart, updateCart } from '../../redux/slice/cartSlice';
 import api from '../api/api';
 
 function Cart(props) {
@@ -15,8 +15,6 @@ function Cart(props) {
     const [editingKey, setEditingKey] = useState(0)
     const [amount, setAmount] = useState(1)
     const [id, setId] = useState()
-    const [total, setTotal] = useState(0)
-
     const response = useSelector(state => state.cart?.response)
     const dispatch = useDispatch()
 
@@ -28,8 +26,10 @@ function Cart(props) {
             await dispatch(fetchCart())
         }
         fetch()
-        setTotal(response?.map((item) => item?.price * item?.amount).filter((x) => x > 0).reduce((x, y) => x + y, 0))
-    }, [response])
+    }, [dispatch, response])
+
+    const total = response?.map((item) => item?.price * item?.amount).filter((x) => x > 0).reduce((x, y) => x + y, 0)
+
 
     const showModal = (id) => {
         setId(id)
