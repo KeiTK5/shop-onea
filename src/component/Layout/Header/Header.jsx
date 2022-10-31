@@ -22,7 +22,6 @@ function HeaderComponent(props) {
         setQuery('')
     }
 
-    const response = useSelector(state => state.user.response)
 
     return (
         <>
@@ -33,15 +32,8 @@ function HeaderComponent(props) {
                 <ul className={style['nav']}>
                     <li className={style["nav-item"]}><BellOutlined style={{ paddingRight: 4 }} />Notification</li>
                     <li className={style["nav-item"]}><QuestionCircleOutlined style={{ paddingRight: 4 }} />Support</li>
-                    {
-                        response.length !== 0 ? response.map((item, index) => (
-                            <li key={index} className={style["nav-item"]}><Link href='/'>{item.name}</Link></li>
-                        )) :
-                            <>
-                                <li className={style["nav-item"]}>Register</li>
-                                <li className={style["nav-item"]}><Link href='/login'>Login</Link></li>
-                            </>
-                    }
+                    <li className={style["nav-item"]}>Register</li>
+                    <li className={style["nav-item"]}><Link href='/login'>Login</Link></li>
                 </ul>
             </div>
             <div className={style.menu}>
