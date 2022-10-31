@@ -6,7 +6,7 @@ function BuyBox({ total }) {
         <div className={style['buy-box']}>
             <div className={style["buy-item"]}>
                 <p className={style["title-total"]}>Total: </p>
-                <p className={style["total-price"]}>${Math.floor(total)}</p>
+                <p className={style["total-price"]}>${`${Math.floor(Number(total))}`}</p>
 
             </div>
             <div className={style["buy-item"]}>
