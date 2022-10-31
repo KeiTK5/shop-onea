@@ -28,7 +28,7 @@ function Cart(props) {
             await dispatch(fetchCart())
         }
         fetch()
-        setTotal(response?.map((item) => item?.price * item?.amount).filter((x) => x > 0).reduce((x, y) => x + y, 0))
+        // setTotal(response?.map((item) => item?.price * item?.amount).filter((x) => x > 0).reduce((x, y) => x + y, 0))
     }, [dispatch, response])
 
     const showModal = (id) => {
