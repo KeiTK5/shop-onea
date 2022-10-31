@@ -155,11 +155,11 @@ function Cart(props) {
                     <a href="">Cart</a>
                 </Breadcrumb.Item>
             </Breadcrumb>
-            <Table className={style['table-column']} columns={columns} dataSource={response ? response : []} rowSelection={{
+            {/* <Table className={style['table-column']} columns={columns} dataSource={response ? response : []} rowSelection={{
                 type: selectionType,
                 ...rowSelection,
-            }} />
-            <BuyBox  />
+            }} /> */}
+            <BuyBox total={total} />
             <Modal okType={'danger'} title="Are you sure delete this product?" open={isModalOpen} onOk={handleDelete} onCancel={handleCancel}>
                 <p>Are you sure delete this product?</p>
             </Modal>
