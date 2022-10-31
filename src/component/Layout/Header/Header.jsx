@@ -14,8 +14,8 @@ function HeaderComponent(props) {
     const handleChange = (value) => setQuery(value.target.value);
 
     const onSearch = () => {
-        router.replace(`/query`)
-        router.push(`/query?${query}`)
+        router.replace(`/query?${query}`)
+        // router.push(`/query?${query}`)
     }
 
     const resetSearch = () => {
