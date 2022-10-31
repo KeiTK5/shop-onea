@@ -29,7 +29,7 @@ function Cart(props) {
         }
         fetch()
         setTotal(response?.map((item) => item?.price * item?.amount).filter((x) => x > 0).reduce((x, y) => x + y, 0))
-    }, [dispatch, response])
+    }, [response])
 
     const showModal = (id) => {
         setId(id)
@@ -155,7 +155,7 @@ function Cart(props) {
                     <a href="">Cart</a>
                 </Breadcrumb.Item>
             </Breadcrumb>
-            <Table className={style['table-column']} columns={columns} dataSource={response ? response : []} rowSelection={{
+            <Table className={style['table-column']} columns={columns} dataSource={response || []} rowSelection={{
                 type: selectionType,
                 ...rowSelection,
             }} />
