@@ -9,6 +9,8 @@ import { fetchCart } from '../../redux/slice/cartSlice';
 import api from '../api/api';
 
 function Cart(props) {
+
+ 
     const [selectionType, setSelectionType] = useState('checkbox');
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [edit, setEdit] = useState(true)
@@ -122,7 +124,7 @@ function Cart(props) {
             title: 'Price',
             dataIndex: 'price',
             key: 'price',
-            render: (record) => <div className={style['price']}>${Math.floor(record.price * record.amount)}</div>,
+            render: (number, record) => <div className={style['price']}>${Math.floor(number * record.amount)}</div>,
         },
         {
             title: 'Action',
