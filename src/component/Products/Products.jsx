@@ -1,22 +1,20 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchData } from "../../../redux/slice/dataSlice";
-
+import api from "../../../pages/api/api";
 import { Card, Col, Row, Image } from "antd";
 import { EyeOutlined } from '@ant-design/icons';
-
 import React from "react";
 import Link from "next/link"
 const { Meta } = Card;
 
 import style from './style.module.scss'
 
-function Products(props) {
+
+function Products() {
 
     const response = useSelector(state => state.data.response)
     const dispatch = useDispatch()
-
-
     useEffect(() => {
         const fetch = async () => {
             await dispatch(fetchData())

@@ -26,7 +26,7 @@ function Cart(props) {
             await dispatch(fetchCart())
         }
         fetch()
-    }, [dispatch, response])
+    }, [dispatch])
 
     const total = response?.map((item) => item?.price * item?.amount).filter((x) => x > 0).reduce((x, y) => x + y, 0)
 
@@ -40,6 +40,7 @@ function Cart(props) {
         try {
             await api.deleteCart(id)
             setIsModalOpen(false);
+            await dispatch(fetchCart())
             message.success('Deleted');
         } catch (error) {
             console.log(error);
@@ -81,6 +82,7 @@ function Cart(props) {
 
         try {
             await api.patchCart(editingKey, object)
+            await dispatch(fetchCart())
             if (edit === false) {
                 message.success('Update Success');
                 setAmount(0)
