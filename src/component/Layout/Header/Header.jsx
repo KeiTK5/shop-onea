@@ -51,7 +51,7 @@ function HeaderComponent(props) {
                     <button className={style["btn-search"]} onClick={onSearch}><SearchOutlined /></button>
                 </div>
                 <div className={style["cart"]}>
-                    <Link href={"/cart"}>
+                    <Link href="/cart">
                         <ShoppingCartOutlined className={style["cart-icon"]} style={{ fontSize: 30, color: 'white' }} />
                     </Link>
                 </div>
