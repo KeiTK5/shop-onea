@@ -1,0 +1,34 @@
+.buy-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    background: white;
+    padding: 24px;
+    margin-bottom: 24px;
+    .buy-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 18px;
+        font-weight: 400;
+        .title-total {
+            margin-right: 16px;
+            margin-bottom: 0;
+        }
+        .total-price {
+            margin-bottom: 0;
+            color: #0779e4;
+            font-weight: 600;
+        }
+        .btn-buy {
+            padding: 8px 48px;
+            background: #0779e4;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+    }
+}

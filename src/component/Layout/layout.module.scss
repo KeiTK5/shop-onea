@@ -1,0 +1,118 @@
+.header {
+    background: #0779e4 !important;
+    height: 100px !important;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+    .info {
+        max-width: 1300px;
+        max-height: 20px;
+        margin: 0 auto 8px;
+        padding: 12px 0 0;
+        display: flex;
+        justify-content: space-between;
+        .nav {
+            max-height: inherit;
+            display: flex;
+            align-items: center;
+            list-style: none;
+            .nav-item {
+                padding: 0 8px;
+                cursor: pointer;
+                font-size: 14px;
+                color: white;
+                a{
+                    color: white;
+                }
+            }
+        }
+        .nav-left {
+            max-height: inherit;
+            display: flex;
+            align-items: center;
+            list-style: none;
+            .nav-item {
+                cursor: pointer;
+                font-size: 14px;
+                color: white;
+            }
+        }
+    }
+    .menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1300px;
+        margin: 0 auto;
+        height: 64px;
+        .logo {
+            font-size: 46px;
+            font-weight: 500;
+            cursor: pointer;
+            color: white;
+            margin: 0;
+        }
+
+        .control-field {
+            height: 55%;
+            width: 60%;
+            position: relative;
+            display: flex;
+            border-radius: 2px;
+
+            .input-search {
+                height: 100%;
+                width: 100%;
+                outline: none;
+                border: none;
+                background: white;
+                border-radius: inherit;
+                padding: 0 16px;
+            }
+            .btn-search {
+                position: absolute;
+                right: 3px;
+                top: 3px;
+                bottom: 3px;
+                width: 60px;
+                padding: 0 16px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                color: white;
+                background: #0779e4;
+                outline: none;
+                border: none;
+                transition: 0.3s ease all;
+                &:hover {
+                    background: #2c92f1;
+                }
+            }
+        }
+        .cart {
+            padding-right: 24px;
+            display: flex;
+            cursor: pointer;
+        }
+    }
+}
+.max-width {
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+
+.up{
+    height: 40px;
+    width: 40px;
+    border-radius: 4px;
+    color: white;
+    background: rgb(27, 27, 27);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

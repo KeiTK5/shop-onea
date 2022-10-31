@@ -1,0 +1,99 @@
+.box-detail {
+    @media only screen and (max-width: 568px) {
+        min-width: auto;
+        max-width: auto;
+        padding: 0 12px;
+    }
+    .box-info-product {
+        display: flex;
+        padding: 8px;
+        @media only screen and (max-width: 998px) {
+            flex-direction: column;
+            align-items: center;
+        }
+        .box-images {
+            width: 450px;
+            max-width: 450px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            @media only screen and (max-width: 998px) {
+                margin-bottom: 32px;
+            }
+            .image-detail {
+                object-fit: cover;
+            }
+            .thumbnail {
+                display: flex;
+                justify-content: space-between;
+                padding: 8px 0;
+                width: inherit;
+                .box-image {
+                    margin: 8px;
+                    width: 25%;
+                    &:first-child{
+                        margin-left: 0;
+                    }
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                    .image-thumbnail {  
+                        height: 100px;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+        .box-info {
+            padding: 0 16px 0 32px;
+            @media only screen and (max-width: 998px) {
+                padding: 0 16px 32px 32px;
+            }
+            .name-product {
+                font-size: 30px;
+                color: black;
+                font-weight: 700;
+            }
+            .pri-product {
+                font-size: 18px;
+                font-weight: 500;
+                color: #0779e4;
+            }
+            .rate-product {
+                font-size: 16px;
+                color: #0779e4;
+                display: flex;
+                padding: 8px 0 24px 0;
+            }
+            .dre-product {
+                font-size: 16px;
+                max-width: 430px;
+                line-height: 1.8;
+                color: rgb(66, 66, 66);
+            }
+            .quality {
+                padding: 16px 0;
+                display: flex;
+                align-items: center;
+            }
+            .wishlist {
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                font-size: 16px;
+                padding-bottom: 16px;
+            }
+            .sku {
+                display: flex;
+                flex-direction: column;
+                p {
+                    margin-bottom: 8px;
+                }
+            }
+        }
+    }
+}
+.rate {
+    color: #0779e4 !important;
+}

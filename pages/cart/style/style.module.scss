@@ -1,0 +1,37 @@
+.breadcrumb-cart {
+    padding: 24px 0;
+
+    .breadcrumb {
+        font-size: 20px;
+    }
+}
+
+.box-item {
+    display: flex;
+    font-size: 18px;
+    .title {
+        &:hover {
+            color: #0779e4;
+        }
+    }
+}
+
+.cart {
+    max-width: 1300px;
+    width: 100%;
+    @media only screen and (max-width: 1360px) {
+        padding: 0 24px;
+    }
+}
+.price {
+    color: #0779e4;
+    font-weight: 600;
+    font-size: 18px;
+}
+.btn-action{
+    font-size: 18px;
+}
+
+.table-column thead{
+    border:1px solid red;
+}
