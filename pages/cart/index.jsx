@@ -5,7 +5,7 @@ import BuyBox from '../../src/component/BuyBox/buyBox';
 
 import style from './style/style.module.scss'
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchCart, updateCart } from '../../redux/slice/cartSlice';
+import { fetchCart } from '../../redux/slice/cartSlice';
 import api from '../api/api';
 
 function Cart(props) {
@@ -53,8 +53,6 @@ function Cart(props) {
 
     const rowSelection = {
         onChange: (selectedRowKeys, selectedRows) => {
-            console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
-
         },
         getCheckboxProps: (record) => ({
             disabled: record.name === 'Disabled User',
@@ -124,7 +122,7 @@ function Cart(props) {
             title: 'Price',
             dataIndex: 'price',
             key: 'price',
-            render: (number, record) => <div className={style['price']}>${Math.floor(record.price * record.amount)}</div>,
+            render: (record) => <div className={style['price']}>${Math.floor(record.price * record.amount)}</div>,
         },
         {
             title: 'Action',
