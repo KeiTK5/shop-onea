@@ -159,7 +159,7 @@ function Cart(props) {
                 type: selectionType,
                 ...rowSelection,
             }} />
-            <BuyBox total={total} />
+            <BuyBox  />
             <Modal okType={'danger'} title="Are you sure delete this product?" open={isModalOpen} onOk={handleDelete} onCancel={handleCancel}>
                 <p>Are you sure delete this product?</p>
             </Modal>
