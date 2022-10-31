@@ -31,7 +31,7 @@ function HeaderComponent(props) {
                 <ul className={style['nav']}>
                     <li className={style["nav-item"]}><BellOutlined style={{ paddingRight: 4 }} />Notification</li>
                     <li className={style["nav-item"]}><QuestionCircleOutlined style={{ paddingRight: 4 }} />Support</li>
-                    <li className={style["nav-item"]}>Register</li>
+                    <li className={style["nav-item"]}><Link href='/step'>Process</Link></li>
                     <li className={style["nav-item"]}><Link href='/'>Login</Link></li>
                 </ul>
             </div>

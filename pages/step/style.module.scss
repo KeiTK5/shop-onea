@@ -1,0 +1,25 @@
+.step {
+    padding: 16px;
+    width: 100%;
+    .breadcrumb-step {
+    }
+    .box-order {
+        display: flex;
+        @media only screen and (max-width: 998px) {
+            flex-direction: column;
+            align-items: center;
+        }
+        .process {
+            padding: 32px 16px 16px 32px;
+            
+        }
+        .box-info {
+            padding: 16px 16px 16px 32px;
+            max-width: 800px;
+            width: 100%;
+            .list-info {
+                
+            }
+        }
+    }
+}

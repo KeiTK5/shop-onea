@@ -45,6 +45,16 @@ const api = {
     const response = await axiosClient.get(url);
     return response;
   },
+  postInfo: async (object) => {
+    const url = `/order`;
+    const response = await axiosClient.post(url, object);
+    return response;
+  },
+  getInfo: async () => {
+    const url = `/order`;
+    const response = await axiosClient.get(url);
+    return response;
+  },
   // refresh: async (code) => {
   //   const url = `/refresh`;
   //   const response = axiosClient.post(url, { code });

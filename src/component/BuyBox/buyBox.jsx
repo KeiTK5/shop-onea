@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import style from './style/style.module.scss'
 function BuyBox({ total }) {
 
@@ -10,9 +11,11 @@ function BuyBox({ total }) {
 
             </div>
             <div className={style["buy-item"]}>
-                <div className={style["btn-buy"]}>
-                    Payment
-                </div>
+                <Link href='/payment'>
+                    <div className={style["btn-buy"]}>
+                        Payment
+                    </div>
+                </Link>
             </div>
         </div>
     );
