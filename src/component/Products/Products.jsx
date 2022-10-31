@@ -14,7 +14,6 @@ import style from './style.module.scss'
 function Products(props) {
 
     const response = useSelector(state => state.data.response)
-    const search = useSelector(state => state.search.response)
     const dispatch = useDispatch()
 
 
@@ -30,33 +29,34 @@ function Products(props) {
     return (
         <Row className={style.row} gutter={[16]}>
             {
-                response?.map((item, index) => (
-                    <Col xs={24} sm={12} md={8} lg={6} xl={6} key={index}>
-                        <Card
-                            className={style["card"]}
-                            hoverable
-                            cover={
-                                <Image
-                                    className={style["image-product"]}
-                                    alt="example"
-                                    src={item?.image}
-                                />
-                            }
-                        >
-                            <Link href={`/detail/${item?.id}/${item?.categoryId}`}>
-                                <Meta className={style["title"]} title={item.title} description="www.instagram.com" />
-                            </Link>
+                response === [] ? <p>Loading...</p> :
+                    response?.map((item, index) => (
+                        <Col xs={24} sm={12} md={8} lg={6} xl={6} key={index}>
+                            <Card
+                                className={style["card"]}
+                                hoverable
+                                cover={
+                                    <Image
+                                        className={style["image-product"]}
+                                        alt="example"
+                                        src={item?.image}
+                                    />
+                                }
+                            >
+                                <Link href={`/detail/${item?.id}/${item?.categoryId}`}>
+                                    <Meta className={style["title"]} title={item.title} description="www.instagram.com" />
+                                </Link>
 
-                            <div className={style["box-price"]}>
-                                <p className={style["price"]}>${item?.price}</p>
-                                <p className={style["sold"]}>
-                                    <EyeOutlined style={{ marginRight: 4 }} />
-                                    {item?.rating.count}k
-                                </p>
-                            </div>
-                        </Card>
-                    </Col>
-                ))
+                                <div className={style["box-price"]}>
+                                    <p className={style["price"]}>${item?.price}</p>
+                                    <p className={style["sold"]}>
+                                        <EyeOutlined style={{ marginRight: 4 }} />
+                                        {item?.rating.count}k
+                                    </p>
+                                </div>
+                            </Card>
+                        </Col>
+                    ))
             }
         </Row >
     );
