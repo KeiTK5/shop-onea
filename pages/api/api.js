@@ -1,9 +1,8 @@
 import axiosClient from "./axiosClient";
 const api = {
-  getData: async () => {
-    const url = `/data`;
-    const response = await axiosClient.get(url);
-    return response;
+  getData: () => {
+    const url = `https://json-shop.herokuapp.com/data`;
+    return url;
   },
   getDataById: async (id) => {
     const url = `/data/${id}`;
