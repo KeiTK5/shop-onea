@@ -12,14 +12,6 @@ import style from "./style.module.scss";
 
 function Products(props) {
   const { prod } = props
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    const fetch = async () => {
-      await dispatch(fetchData());
-    };
-    fetch();
-  }, [dispatch]);
 
   return (
     <Row className={style.row} gutter={[16]}>

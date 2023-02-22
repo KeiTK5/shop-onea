@@ -1,10 +1,10 @@
 import axios from "axios";
 
 const axiosClient = axios.create({
-  baseURL: "https://json-shop.herokuapp.com/",
-  headers: {
-    "Content-Type": "application/json",
-  },
+    baseURL: "https://jade-attractive-indri.cyclic.app/",
+    headers: {
+        "Content-Type": "application/json",
+    },
 });
 
 // Add a request interceptor
