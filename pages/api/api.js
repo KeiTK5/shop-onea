@@ -30,6 +30,7 @@ const api = {
         return response;
     },
     patchCart: async (id, object) => {
+      console.log(object);
         const url = `/cart/${id}`;
         const response = await axiosClient.patch(url, object);
         return response;

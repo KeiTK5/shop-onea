@@ -25,10 +25,10 @@ function Cart(props) {
 
     useEffect(() => {
         const fetch = async () => {
-            await dispatch(fetchCart())
-        }
-        fetch()
-    }, [dispatch])
+            await dispatch(fetchCart());
+        };
+        fetch();
+    }, [dispatch, amount]);
 
     const total = response?.map((item) => item?.price * item?.amount).filter((x) => x > 0).reduce((x, y) => x + y, 0)
 
